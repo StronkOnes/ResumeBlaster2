@@ -18,7 +18,7 @@ const RESUME_CONTEXT_PROFILE = {
   },
   response_style: {
     tone: "Professional and Confident",
-    format: "Markdown with clear headers (###).",
+    format: "Plain text - no markdown formatting.",
     rules: ["Use power words", "Quantify achievements", "No filler words"]
   }
 };
@@ -78,8 +78,8 @@ const buildGeminiPrompt = (
 
   systemInstruction += `
     Output Format:
-    Return ONLY the resume content in clean Markdown format. Do not include conversational filler before or after.
-    Format the content according to the template style specified above.
+    Return ONLY the resume content in clean plain text format. Do not include conversational filler before or after.
+    Format the content according to the template style specified above but with no markdown formatting (no ##, *, -, etc.).
   `;
 
     const userContent = `User Job Title: ${jobTitle}\n\nUser Raw Content:\n${rawContent}`
