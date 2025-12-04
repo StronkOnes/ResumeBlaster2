@@ -2,7 +2,7 @@ import { OptimizationMode, ResumeTemplate } from "../types";
 import { EXPO_PUBLIC_SERVER_URL } from "@env";
 
 // Get the server URL from environment - fallback to localhost for development
-const SERVER_URL = EXPO_PUBLIC_SERVER_URL || "http://10.0.2.2:3000"; // Use your actual server IP or emulator localhost
+const SERVER_URL = EXPO_PUBLIC_SERVER_URL || "https://resumeblaster.onrender.com"; // Use your actual server IP or emulator localhost
 
 export const generateResumeContent = async (
   rawContent: string,
