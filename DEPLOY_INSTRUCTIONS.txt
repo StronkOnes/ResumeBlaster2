@@ -1,0 +1,29 @@
+Here are the commands you need to run in your own terminal (PowerShell or Command Prompt) to deploy the Supabase Edge Function.
+
+**Step 1: Log in to the Supabase CLI**
+
+First, you need to log in to your Supabase account. Run the following command:
+
+```
+supabase login
+```
+
+This will open a browser window and ask you to authorize the CLI. Follow the instructions to generate a new Personal Access Token, and then paste it into the terminal when prompted.
+
+**Step 2: Navigate to the Server Directory**
+
+Once you are logged in, you need to be in the correct directory to deploy the function. Navigate to the `MobileApp/server` directory using the `cd` command:
+
+```
+cd MobileApp/server
+```
+
+**Step 3: Deploy the Function**
+
+Now, you can deploy the `pdf-parser` function. Run the following command:
+
+```
+supabase functions deploy pdf-parser --project-ref kykgfsceydneqipgcejb
+```
+
+After running this command, the `pdf-parser` Edge Function should be deployed to your Supabase project. You can then try uploading a PDF file in your mobile app again, and the parsing should work correctly.
